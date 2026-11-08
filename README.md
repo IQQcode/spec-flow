@@ -22,20 +22,7 @@ spec-flow makes all three *illegal*.
 
 ## The pipeline
 
-```mermaid
-flowchart TD
-    A[User request] --> T["1 · Think — clarify"]
-    T --> QD{Gate: design doc?}
-    QD -->|yes| D["2 · Design — doc.md"]
-    QD -->|no| S["3 · Split — W1, W2 …"]
-    D --> S
-    S --> QP{Gate: task plan?}
-    QP -->|yes| P["4 · Plan — tasks.md"]
-    QP -->|no| I["5b · Direct implement"]
-    P --> E["5a · Implement per task"]
-    E --> R["6 · Wrap-up — summary.md"]
-    I --> R
-```
+![The spec-flow pipeline](assets/pipeline.png)
 
 Four hard rules the agent may not break:
 

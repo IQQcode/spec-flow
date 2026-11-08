@@ -22,20 +22,7 @@ spec-flow 让这三种状态**直接非法**。
 
 ## 主流程
 
-```mermaid
-flowchart TD
-    A[用户需求] --> T["1 · think 澄清"]
-    T --> QD{门禁：是否写设计文档?}
-    QD -->|是| D["2 · design — doc.md"]
-    QD -->|否| S["3 · split — W1, W2 …"]
-    D --> S
-    S --> QP{门禁：是否写实施计划?}
-    QP -->|是| P["4 · plan — tasks.md"]
-    QP -->|否| I["5b · 直接实现"]
-    P --> E["5a · 按 tasks.md 逐项实现"]
-    E --> R["6 · 收尾 — summary.md"]
-    I --> R
-```
+![spec-flow 流水线](assets/pipeline-zh.png)
 
 Agent 不可逾越的四条硬规则：
 
